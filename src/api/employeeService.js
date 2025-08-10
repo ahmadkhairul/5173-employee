@@ -1,5 +1,5 @@
 // Employee API service for CRUD operations
-const API_URL = 'http://localhost:3000/api/v1/employees';
+const API_URL = import.meta.env.VITE_APP_API_URL + "/employees";
 
 function getToken() {
   return localStorage.getItem('jwtToken');
