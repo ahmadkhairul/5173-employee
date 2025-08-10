@@ -1,0 +1,165 @@
+body {
+  background: #181a20;
+  color: #f1f1f1;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: #23272f;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px #000a;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.login-form, .employee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: #23272f;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0004;
+}
+
+.login-form input, .employee-form input {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #181a20;
+  color: #f1f1f1;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.2s;
+}
+
+.login-form input:focus, .employee-form input:focus {
+  background: #23272f;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px #0003;
+  margin: 0 0.25rem;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #22c55e, #15803d);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #15803d, #22c55e);
+}
+
+.btn-secondary {
+  background: linear-gradient(90deg, #a16207, #854d0e);
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: linear-gradient(90deg, #854d0e, #a16207);
+}
+
+.btn-warning {
+  background: linear-gradient(90deg, #facc15, #eab308);
+  color: #23272f;
+}
+.btn-warning:hover {
+  background: linear-gradient(90deg, #eab308, #facc15);
+}
+
+.btn-danger {
+  background: linear-gradient(90deg, #ef4444, #b91c1c);
+  color: #fff;
+}
+.btn-danger:hover {
+  background: linear-gradient(90deg, #b91c1c, #ef4444);
+}
+
+button {
+  /* Remove old button styles, now use .btn and variants */
+  background: none;
+  color: inherit;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 2px solid #8ab4f8;
+}
+
+button[type="button"] {
+  background: #444950;
+  color: #f1f1f1;
+  margin-left: 0.5rem;
+}
+
+button[type="button"]:hover {
+  background: #23272f;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #23272f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #0004;
+}
+
+.employee-table th, .employee-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.employee-table th {
+  background: #181a20;
+  color: #8ab4f8;
+  font-weight: 700;
+  border-bottom: 2px solid #2c2f36;
+}
+
+.employee-table tr {
+  border-bottom: 1px solid #2c2f36;
+}
+
+.employee-table tr:last-child {
+  border-bottom: none;
+}
+
+.employee-table td {
+  color: #f1f1f1;
+}
+
+@media (max-width: 700px) {
+  #root {
+    max-width: 100vw;
+    padding: 1rem;
+  }
+  .employee-table th, .employee-table td {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .login-form, .employee-form {
+    padding: 1rem 0.5rem;
+  }
+}
